@@ -78,19 +78,20 @@
           </div>
           <div class="col-md-7 pt-5">
 
-            <form action="/thankyou.html" method="post">
+            <form class="gform pure-form pure-form-stacked contact-form" method="POST" data-email="example@email.net"
+            action="https://script.google.com/macros/s/AKfycbwQv0U41hrTtEZNW4Jy5EGtmIJVKyvAQ6obCq1iYw/exec">
 
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_fname" class="text-black">Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_fname" name="c_fname" required>
+                    <input type="text" class="form-control" id="c_fname" name="name" required>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_email" class="text-black">Email <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" id="c_email" name="c_email" placeholder="" required>
+                    <input type="email" class="form-control" id="c_email" name="email" placeholder="" required>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -107,12 +108,23 @@
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_message" class="text-black">Message </label>
-                    <textarea name="c_message" id="c_message" cols="30" rows="7" class="form-control" required></textarea>
+                    <textarea name="message" id="c_message" cols="30" rows="7" class="form-control" required></textarea>
                   </div>
                 </div>
-                <div class="form-group row">
+                
+                <div class="form-group row" style="display: none;">
+                  <div class="col-lg-12 honeypot-field">
+                    <input id="honeypot" type="text" name="honeypot" value="" />
+                  </div>
+                </div>
+                <div class="form-group row" id="button-form-submit" >
                   <div class="col-lg-12">
                     <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send Message">
+                  </div>
+                </div>
+                <div class="form-group row" id="loading-form-submit" style="display: none;" >
+                  <div class="col-lg-12">
+                    <h4>Submitting...</h4>
                   </div>
                 </div>
               </div>
@@ -198,7 +210,7 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
-
+  <script src="js/form-submission-handler.js"></script>
   <script src="js/main.js"></script>
 
 </body>
