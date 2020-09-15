@@ -773,7 +773,27 @@ color: #777777;}
 }
 .site-blocks-cover{
   background-image: url(../img/banner-bg.png);
- 
+}
+
+.block-4-text a{
+  color:#346833;
+}
+.product-heading{
+  color:#346833!important;
+  font-weight: 600;
+}
+@media  (max-width: 361px){
+  .site-blocks-cover h1 {
+    font-size: 20px!important; 
+  } 
+  .site-blocks-cover .intro-text p {
+    font-size: 12px!important; 
+    line-height: 1.5!important;
+  } 
+  .site-blocks-cover .btn-primary{
+    font-size: 10px !important;
+    padding: 5px 10px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -801,13 +821,4 @@ color: #777777;}
     display: none;
   }
 
-  }
-
-  .block-4-text a{
-    color:#346833;
-  }
-
-  .product-heading{
-    color:#346833!important;
-    font-weight: 600;
   }
