@@ -467,7 +467,8 @@ color: #777777;}
 .site-blocks-cover {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center center;
+ }
   .site-blocks-cover, .site-blocks-cover .row {
     min-height: 600px;
     height: 100vh; }
@@ -821,4 +822,17 @@ color: #777777;}
     display: none;
   }
 
+  }
+  @media  (max-width: 1440px){
+    .site-blocks-cover h1 {
+      font-size: 22px!important; 
+    } 
+    .site-blocks-cover .intro-text p {
+      font-size: 14px!important; 
+      line-height: 1.6!important;
+    } 
+    .site-blocks-cover .btn-primary{
+      font-size: 10px !important;
+      padding: 5px 10px !important;
+    }
   }
