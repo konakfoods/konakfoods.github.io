@@ -69,7 +69,8 @@ a {
   -o-transition: 0.2s all ease-in-out !important;
   transition: 0.2s all ease-in-out !important;
   top: 0;
-  letter-spacing: .05em; }
+  letter-spacing: .05em; 
+  border: none;}
   .btn:hover, .btn:active, .btn:focus {
     outline: none;
     -webkit-box-shadow: none !important;
@@ -162,10 +163,6 @@ color: #777777;}
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 0px; }
-    @media (min-width: 768px) {
-      .site-navbar .site-navbar-top {
-        padding-top: 40px;
-        padding-bottom: 40px; } }
   .site-navbar .site-search-icon a span {
     display: inline-block;
     margin-right: 10px; }
@@ -239,13 +236,13 @@ color: #777777;}
       display: inline-block; }
     .site-navbar .site-navigation .site-menu > li {
       display: inline-block;
-      padding: 10px 5px; }
+      }
       .site-navbar .site-navigation .site-menu > li > a {
         padding: 10px 10px;
         text-transform: uppercase;
         letter-spacing: .05em;
         color: #fff;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
@@ -468,22 +465,70 @@ color: #777777;}
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-image: url(../img/new-banner.png);
  }
   .site-blocks-cover, .site-blocks-cover .row {
     min-height: 600px;
-    height: 100vh; }
+    height: calc(100vh - 174px);  
+  }
   .site-blocks-cover h1 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
-    color: #000; }
-
+    color: #000; 
+  }
   .site-blocks-cover p {
     color: #333333;
-    font-size: 20px;
-    line-height: 35px; }
+    font-size: 18px;
+    line-height: 1.6; 
+  }
   .site-blocks-cover .intro-text {
     font-size: 16px;
-    line-height: 1.5; }
+    line-height: 1.5; 
+  }
+  .hero-desc{
+    background-color: #F8F9FA;
+    padding: 10px;
+  }
+
+/* mobile css for banners*/
+
+  @media  (max-width: 361px){
+    .site-blocks-cover h1 {
+      font-size: 20px!important; 
+    } 
+    .site-blocks-cover .intro-text p {
+      font-size: 12px!important; 
+      line-height: 1.5!important;
+    } 
+    .site-blocks-cover .btn-primary{
+      font-size: 10px !important;
+      padding: 5px 10px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .site-blocks-cover{
+      background-image: url(../img/new-mobile-banner.png);
+    }
+    .site-blocks-cover h1 {
+      font-size: 24px; 
+    } 
+    .site-blocks-cover p {
+      font-size: 14px; 
+      line-height: 1.6;
+    } 
+  }
+
+  @media (max-width: 768px) {
+    .site-blocks-cover h1 {
+      font-size: 30px; 
+    } 
+    .site-blocks-cover p {
+      font-size: 14px; 
+      line-height: 1.6;
+    } 
+    }
+/* end of mobile css for banners*/
 
 .site-blocks-1 {
   border-bottom: 1px solid #edf0f5; }
@@ -750,32 +795,6 @@ color: #777777;}
   cursor: pointer;
 }
 
-.arrow {
-  text-align: center;
-  margin: 8% 0;
-  cursor: pointer;
-}
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-.site-blocks-cover{
-  background-image: url(../img/banner-bg.png);
-}
-
 .block-4-text a{
   color:#346833;
 }
@@ -783,56 +802,3 @@ color: #777777;}
   color:#346833!important;
   font-weight: 600;
 }
-@media  (max-width: 361px){
-  .site-blocks-cover h1 {
-    font-size: 20px!important; 
-  } 
-  .site-blocks-cover .intro-text p {
-    font-size: 12px!important; 
-    line-height: 1.5!important;
-  } 
-  .site-blocks-cover .btn-primary{
-    font-size: 10px !important;
-    padding: 5px 10px !important;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .site-blocks-cover h1 {
-    font-size: 24px; 
-  } 
-  .site-blocks-cover p {
-    font-size: 14px; 
-    line-height: 1.6;
-  } 
-  
-  .full-bg-image{
-    position: absolute;
-    top:50%;
-    left: 0%;
-    text-align: center!important;
-    -webkit-transform:translate(0%, -50%);
-  }
-
-  .site-blocks-cover{
-    background-image: url(../img/mobile-konak-bg.png);
-  }
-  .arrow {
-    display: none;
-  }
-
-  }
-  @media  (max-width: 1440px){
-    .site-blocks-cover h1 {
-      font-size: 22px!important; 
-    } 
-    .site-blocks-cover .intro-text p {
-      font-size: 14px!important; 
-      line-height: 1.6!important;
-    } 
-    .site-blocks-cover .btn-primary{
-      font-size: 10px !important;
-      padding: 5px 10px !important;
-    }
-  }
