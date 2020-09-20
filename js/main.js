@@ -7,8 +7,7 @@ jQuery(document).ready(function($) {
 			scrollTop: $("#home").offset().top
 		}, 2000);
 	});
-	
-	
+
 	var slider = function() {
 		$('.nonloop-block-3').owlCarousel({
 	    center: false,
@@ -140,25 +139,26 @@ jQuery(document).ready(function($) {
 $(document).ready(function() {
 
 	$(".owl-carousel").owlCarousel({
+	    center: false,
+		items: 1,
 		autoplay:true,
 		autoplayTimeout: 3000,
-		items : 4,
-		center: false,
-		loop:true,
-		responsive: {
-		600:{
-			margin: 20,
-			items: 2
-		},
-		1000:{
-			margin: 20,
-			items: 4
-		},
-		1200:{
-			margin: 20,
-			items: 4
-		}
-	}
-
+	    loop: true,
+		stagePadding: 15,
+	    margin: 20,
+	    responsive:{
+        600:{
+        	margin: 20,
+          items: 2
+        },
+        1000:{
+        	margin: 20,
+          items: 4
+        },
+        1200:{
+        	margin: 20,
+          items: 4
+        }
+	    }
 });
 });
